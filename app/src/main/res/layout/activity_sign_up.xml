@@ -191,7 +191,7 @@
                 android:background="@drawable/custom_edit_text_rounded"
                 android:fontFamily="@font/poppins"
                 android:gravity="center_vertical"
-                android:hint="@string/enter_your_country"
+                android:hint="@string/enter_your_password"
                 android:inputType="textPassword"
                 android:paddingStart="20dp"
                 android:paddingTop="16dp"

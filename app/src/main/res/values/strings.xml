@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CatPrice</string>
+    <string name="image">image</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="btc_next">Next</string>
+    <string name="btc_finish">Finish</string>
+    <string name="welcome_to_our_app">Welcome To Our App</string>
+    <string name="name">Name</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_dis">Lorem ipsum dolor sit amet consectetur. Dis</string>
+    <string name="neque_tempus_dictum_ornare_a_augue">neque tempus dictum ornare a. Augue</string>
+    <string name="malesuada">malesuada.</string>
+    <string name="get_started">Get Started</string>
+    <string name="sign_in">Sign In</string>
+    <string name="welcome_back_we_missed_you">Welcome Back ,We missed you</string>
+    <string name="email">Email</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="password">Password</string>
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="don_t_have_an_account">Don’t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="full_name">Full Name</string>
+
+</resources>

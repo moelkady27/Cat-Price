@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.catprice.R
-import com.example.catprice.ui.auth.SignInActivity
+import com.example.catprice.ui.auth.activities.SignInActivity
 import kotlinx.android.synthetic.main.activity_main.getStarted
 
 class MainActivity : AppCompatActivity() {

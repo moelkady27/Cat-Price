@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CatPrice</string>
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="welcome_back_we_missed_you">"مرحبا بعودتك ,لقد افتقدناك "</string>
+    <string name="email">البريد الالكترونى</string>
+    <string name="enter_your_email">ادخل البريد الالكترونى</string>
+    <string name="password">كلمة المرور</string>
+    <string name="enter_your_password">ادخل كلمة المرور</string>
+    <string name="forget_password">هل نسيت كلمة السر؟</string>
+    <string name="don_t_have_an_account">ليس لديك حساب؟</string>
+    <string name="sign_up">انشاء حساب</string>
+    <string name="full_name">الاسم بالكامل</string>
+    <string name="enter_your_full_name">ادخل الاسم بالكامل</string>
+    <string name="phone">رقم الهاتف</string>
+    <string name="enter_your_phone_number">ادخل رقم الهاتف</string>
+    <string name="country">الدولة</string>
+    <string name="enter_your_country">اختار الدولة</string>
+    <string name="individual">حساب فردى</string>
+    <string name="company">شركة</string>
+    <string name="enter_your_company_name">ادخل اسم الشركة</string>
+    <string name="forgot_password">نسيت كلمة المرور</string>
+    <string name="enter_your_phone_number_to_reset_your">أدخل رقم الهاتف الخاص بك لإعادة تعيين</string>
+    <string name="send">ارسال</string>
+</resources>

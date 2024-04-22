@@ -43,6 +43,7 @@ class SignUpActivity : AppCompatActivity() {
                 val message = response.success.toString()
 
                 Log.e("message sign up", message)
+                startActivity(Intent(this@SignUpActivity , SignInActivity::class.java))
             }
         }
 
@@ -75,7 +76,9 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         btn_sign_up.setOnClickListener {
-            signUp()
+            if (networkUtils.isNetworkAvailable()){
+                signUp()
+            }
         }
     }
 

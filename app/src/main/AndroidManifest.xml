@@ -17,8 +17,10 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ui.LolActivity"
-            android:exported="false" />
+            android:name=".ui.home.activities.HomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ui.auth.activities.ForgotPasswordActivity"
             android:exported="false"

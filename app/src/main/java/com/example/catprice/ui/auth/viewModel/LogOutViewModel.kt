@@ -8,7 +8,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class LolViewModel: ViewModel() {
+class LogOutViewModel: ViewModel() {
 
     val logOutResponseLiveData: MutableLiveData<LogOutResponse> = MutableLiveData()
     val errorLiveData: MutableLiveData<String> = MutableLiveData()

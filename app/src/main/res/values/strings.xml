@@ -34,4 +34,7 @@
     <string name="send" translatable="false">Send</string>
     <string name="string" translatable="false">ar</string>
 
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="search_items">Search items</string>
 </resources>

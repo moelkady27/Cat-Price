@@ -9,8 +9,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.catprice.R
 import com.example.catprice.ntwork.NetworkUtils
 import com.example.catprice.storage.AppReferences
-import com.example.catprice.ui.LolActivity
 import com.example.catprice.ui.auth.viewModel.SignInViewModel
+import com.example.catprice.ui.home.activities.HomeActivity
 import kotlinx.android.synthetic.main.activity_sign_in.btn_sign_in
 import kotlinx.android.synthetic.main.activity_sign_in.et_email_sign_in
 import kotlinx.android.synthetic.main.activity_sign_in.et_password_sign_in
@@ -49,7 +49,7 @@ class SignInActivity : AppCompatActivity() {
 
                 Log.e("Sign In userId is " , userId)
 
-                startActivity(Intent(this@SignInActivity , LolActivity::class.java))
+                startActivity(Intent(this@SignInActivity , HomeActivity::class.java))
             }
         }
 

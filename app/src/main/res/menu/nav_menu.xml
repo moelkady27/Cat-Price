@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/searchItem"
+        android:title="@string/search_items"
+        android:icon="@drawable/baseline_search_24" />
+    <item
+        android:id="@+id/favouriteItem"
+        android:title="Favourite"
+        android:icon="@drawable/baseline_favorite_border_24"/>
+
+    <item
+        android:id="@+id/calculatorItem"
+        android:title="Calculator"
+        android:icon="@drawable/baseline_calculate_24"/>
+
+    <item
+        android:id="@+id/MyListsItem"
+        android:title="My lists"
+        android:icon="@drawable/baseline_list_alt_24"/>
+
+    <item
+        android:id="@+id/brandsItem"
+        android:title="Brands"
+        android:icon="@drawable/baseline_lan_24"/>
+
+    <item
+        android:id="@+id/inboxItem"
+        android:title="Inbox"
+        android:icon="@drawable/baseline_inbox_24"/>
+
+    <item
+        android:id="@+id/contactUsItem"
+        android:title="Contact us"
+        android:icon="@drawable/baseline_call_24"/>
+
+    <item
+        android:id="@+id/settingsItem"
+        android:title="Settings"
+        android:icon="@drawable/baseline_settings_24"/>
+
+    <item
+        android:id="@+id/shareAppItem"
+        android:title="Share app"
+        android:icon="@drawable/baseline_share_24"/>
+
+    <item
+        android:id="@+id/subscriptionsItem"
+        android:title="Subscriptions"
+        android:icon="@drawable/baseline_celebration_24"/>
+
+    <item
+        android:id="@+id/logoutItem"
+        android:title="Logout"
+        android:icon="@drawable/baseline_logout_24"/>
+
+</menu>

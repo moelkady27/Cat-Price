@@ -64,4 +64,5 @@
     <string name="enter_your_new_password">Enter Your New Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="confirm_your_password">Confirm Your Password</string>
+    <string name="edit">Edit</string>
 </resources>

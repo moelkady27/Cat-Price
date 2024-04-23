@@ -5,6 +5,8 @@ import com.example.catprice.ui.auth.models.SignInResponse
 import com.example.catprice.ui.auth.models.SignUpResponse
 import com.example.catprice.ui.auth.request.SignInRequest
 import com.example.catprice.ui.auth.request.SignUpRequest
+import com.example.catprice.ui.setting.models.ChangePasswordResponse
+import com.example.catprice.ui.setting.request.ChangePasswordRequest
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.Header
@@ -31,4 +33,10 @@ interface ApiService {
         @Query("_id") userId: String,
     ): Call<LogOutResponse>
 
+    @PUT("api/v1/user/changePassword")
+    fun changePass(
+        @Header("Authorization") token: String,
+        @Body req: ChangePasswordRequest,
+        @Query("_id") userId: String,
+    ): Call<ChangePasswordResponse>
 }

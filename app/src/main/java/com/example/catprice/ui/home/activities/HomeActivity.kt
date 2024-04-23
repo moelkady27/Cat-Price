@@ -13,7 +13,7 @@ import com.example.catprice.R
 import com.example.catprice.storage.AppReferences
 import com.example.catprice.ui.auth.activities.SignInActivity
 import com.example.catprice.ui.auth.viewModel.LogOutViewModel
-import com.example.catprice.ui.setting.SettingsActivity
+import com.example.catprice.ui.setting.activities.SettingsActivity
 import kotlinx.android.synthetic.main.activity_home.drawerLayout
 import kotlinx.android.synthetic.main.activity_home.navView
 import kotlinx.android.synthetic.main.activity_home.toolbar

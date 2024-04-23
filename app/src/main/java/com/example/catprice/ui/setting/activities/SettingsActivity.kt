@@ -1,15 +1,17 @@
-package com.example.catprice.ui.setting
+package com.example.catprice.ui.setting.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.catprice.R
+import kotlinx.android.synthetic.main.activity_settings.arrow_forward_change_pass
 import kotlinx.android.synthetic.main.activity_settings.spinner
 import kotlinx.android.synthetic.main.activity_settings.spinner1
+import kotlinx.android.synthetic.main.activity_settings.textView29
 import kotlinx.android.synthetic.main.activity_settings.toolbar_setting
 
 class SettingsActivity : AppCompatActivity() {
@@ -71,6 +73,14 @@ class SettingsActivity : AppCompatActivity() {
 
             }
 
+        }
+
+        arrow_forward_change_pass.setOnClickListener {
+            startActivity(Intent(this@SettingsActivity , ChangePasswordActivity::class.java))
+        }
+
+        textView29.setOnClickListener {
+            startActivity(Intent(this@SettingsActivity , ChangePasswordActivity::class.java))
         }
 
         setUpActionBar()

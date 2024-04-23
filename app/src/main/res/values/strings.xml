@@ -51,12 +51,17 @@
     <string name="share_app" translatable="false">Share app</string>
     <string name="subscriptions" translatable="false">Subscriptions</string>
     <string name="logout" translatable="false">Logout</string>
-    <string name="language">Language</string>
-    <string name="english">English</string>
-    <string name="arabic">Arabic</string>
-    <string name="currency">Currency</string>
-    <string name="edit_profile">Edit Profile</string>
-    <string name="change_password">Change Password</string>
-    <string name="discount_margin">Discount Margin</string>
-    <string name="delete_account">Delete Account</string>
+    <string name="language" translatable="false">Language</string>
+    <string name="english" translatable="false">English</string>
+    <string name="arabic" translatable="false">Arabic</string>
+    <string name="currency" translatable="false">Currency</string>
+    <string name="edit_profile" translatable="false">Edit Profile</string>
+    <string name="change_password" translatable="false">Change Password</string>
+    <string name="discount_margin" translatable="false">Discount Margin</string>
+    <string name="delete_account" translatable="false">Delete Account</string>
+    <string name="enter_your_current_password">Enter Your Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="enter_your_new_password">Enter Your New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm_your_password">Confirm Your Password</string>
 </resources>

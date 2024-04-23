@@ -37,4 +37,12 @@
     <string name="share_app">مشاركة التطبيق</string>
     <string name="subscriptions">الاشتراك</string>
     <string name="logout">تسجيل الخروج</string>
+    <string name="language">اللغة</string>
+    <string name="english">الانجليزية</string>
+    <string name="arabic">العربية</string>
+    <string name="currency">العملة</string>
+    <string name="edit_profile">تعديل الملف الشخصى</string>
+    <string name="change_password">تغيير الرقم السرى</string>
+    <string name="discount_margin">هامش الخصم</string>
+    <string name="delete_account">حذف الحساب</string>
 </resources>

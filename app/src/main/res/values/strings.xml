@@ -51,4 +51,12 @@
     <string name="share_app" translatable="false">Share app</string>
     <string name="subscriptions" translatable="false">Subscriptions</string>
     <string name="logout" translatable="false">Logout</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="arabic">Arabic</string>
+    <string name="currency">Currency</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_password">Change Password</string>
+    <string name="discount_margin">Discount Margin</string>
+    <string name="delete_account">Delete Account</string>
 </resources>

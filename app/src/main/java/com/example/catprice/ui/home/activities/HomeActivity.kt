@@ -13,7 +13,7 @@ import com.example.catprice.R
 import com.example.catprice.storage.AppReferences
 import com.example.catprice.ui.auth.activities.SignInActivity
 import com.example.catprice.ui.auth.viewModel.LogOutViewModel
-import kotlinx.android.synthetic.main.activity_forgot_password.toolbar_forget_password
+import com.example.catprice.ui.setting.SettingsActivity
 import kotlinx.android.synthetic.main.activity_home.drawerLayout
 import kotlinx.android.synthetic.main.activity_home.navView
 import kotlinx.android.synthetic.main.activity_home.toolbar
@@ -62,7 +62,7 @@ class HomeActivity : AppCompatActivity() {
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
 
-        toggle.drawerArrowDrawable.color = ContextCompat.getColor(this, R.color.white) // Set drawer icon color to white
+        toggle.drawerArrowDrawable.color = ContextCompat.getColor(this, R.color.white)
 
 
         drawerLayout.addDrawerListener(toggle)
@@ -105,7 +105,7 @@ class HomeActivity : AppCompatActivity() {
                 }
 
                 R.id.settingsItem -> {
-
+                    startActivity(Intent(this@HomeActivity, SettingsActivity::class.java))
                 }
 
                 R.id.shareAppItem -> {

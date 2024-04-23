@@ -22,4 +22,19 @@
     <string name="forgot_password">نسيت كلمة المرور</string>
     <string name="enter_your_phone_number_to_reset_your">أدخل رقم الهاتف الخاص بك لإعادة تعيين</string>
     <string name="send">ارسال</string>
+    <string name="search_items">عناصر البحث</string>
+    <string name="hi">مرحبا,</string>
+    <string name="lets_start_now">هيا بنا نبدا</string>
+    <string name="search">بحث</string>
+    <string name="my_tools">أدواتي</string>
+    <string name="favourite">المفضلة</string>
+    <string name="calculator">الحاسبة</string>
+    <string name="my_lists">قائمتى</string>
+    <string name="brands">الماركات</string>
+    <string name="inbox">صندوق الوارد</string>
+    <string name="contact_us">تواصل معنا</string>
+    <string name="settings">الاعدادات</string>
+    <string name="share_app">مشاركة التطبيق</string>
+    <string name="subscriptions">الاشتراك</string>
+    <string name="logout">تسجيل الخروج</string>
 </resources>

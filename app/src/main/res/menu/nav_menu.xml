@@ -6,52 +6,52 @@
         android:icon="@drawable/baseline_search_24" />
     <item
         android:id="@+id/favouriteItem"
-        android:title="Favourite"
+        android:title="@string/favourite"
         android:icon="@drawable/baseline_favorite_border_24"/>
 
     <item
         android:id="@+id/calculatorItem"
-        android:title="Calculator"
+        android:title="@string/calculator"
         android:icon="@drawable/baseline_calculate_24"/>
 
     <item
         android:id="@+id/MyListsItem"
-        android:title="My lists"
+        android:title="@string/my_lists"
         android:icon="@drawable/baseline_list_alt_24"/>
 
     <item
         android:id="@+id/brandsItem"
-        android:title="Brands"
+        android:title="@string/brands"
         android:icon="@drawable/baseline_lan_24"/>
 
     <item
         android:id="@+id/inboxItem"
-        android:title="Inbox"
+        android:title="@string/inbox"
         android:icon="@drawable/baseline_inbox_24"/>
 
     <item
         android:id="@+id/contactUsItem"
-        android:title="Contact us"
+        android:title="@string/contact_us"
         android:icon="@drawable/baseline_call_24"/>
 
     <item
         android:id="@+id/settingsItem"
-        android:title="Settings"
+        android:title="@string/settings"
         android:icon="@drawable/baseline_settings_24"/>
 
     <item
         android:id="@+id/shareAppItem"
-        android:title="Share app"
+        android:title="@string/share_app"
         android:icon="@drawable/baseline_share_24"/>
 
     <item
         android:id="@+id/subscriptionsItem"
-        android:title="Subscriptions"
+        android:title="@string/subscriptions"
         android:icon="@drawable/baseline_celebration_24"/>
 
     <item
         android:id="@+id/logoutItem"
-        android:title="Logout"
+        android:title="@string/logout"
         android:icon="@drawable/baseline_logout_24"/>
 
 </menu>

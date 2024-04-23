@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name" translatable="false">CatPrice</string>
-    <string name="image" translatable="false">image</string>
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="image">image</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="btc_next" translatable="false">Next</string>
-    <string name="btc_finish" translatable="false">Finish</string>
-    <string name="welcome_to_our_app" translatable="false">Welcome To Our App</string>
-    <string name="name" translatable="false">Name</string>
-    <string name="lorem_ipsum_dolor_sit_amet_consectetur_dis" translatable="false">Lorem ipsum dolor sit amet consectetur. Dis</string>
-    <string name="neque_tempus_dictum_ornare_a_augue" translatable="false">neque tempus dictum ornare a. Augue</string>
-    <string name="malesuada" translatable="false">malesuada.</string>
-    <string name="get_started" translatable="false">Get Started</string>
+    <string name="btc_next">Next</string>
+    <string name="btc_finish">Finish</string>
+    <string name="welcome_to_our_app">Welcome To Our App</string>
+    <string name="name">Name</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_dis">Lorem ipsum dolor sit amet consectetur. Dis</string>
+    <string name="neque_tempus_dictum_ornare_a_augue">neque tempus dictum ornare a. Augue</string>
+    <string name="malesuada">malesuada.</string>
+    <string name="get_started">Get Started</string>
     <string name="sign_in" translatable="false">Sign In</string>
     <string name="welcome_back_we_missed_you" translatable="false">Welcome Back ,We missed you</string>
     <string name="email" translatable="false">Email</string>
@@ -32,9 +32,23 @@
     <string name="forgot_password" translatable="false">Forgot password</string>
     <string name="enter_your_phone_number_to_reset_your" translatable="false">Enter your Phone Number to reset your</string>
     <string name="send" translatable="false">Send</string>
-    <string name="string" translatable="false">ar</string>
+    <string name="string">ar</string>
 
     <string name="open">Open</string>
     <string name="close">Close</string>
-    <string name="search_items">Search items</string>
+    <string name="search_items" translatable="false">Search items</string>
+    <string name="hi" translatable="false">Hi,</string>
+    <string name="lets_start_now" translatable="false">Lets Start Now</string>
+    <string name="search" translatable="false">Search</string>
+    <string name="my_tools" translatable="false">My Tools</string>
+    <string name="favourite" translatable="false">Favourite</string>
+    <string name="calculator" translatable="false">Calculator</string>
+    <string name="my_lists" translatable="false">My lists</string>
+    <string name="brands" translatable="false">Brands</string>
+    <string name="inbox" translatable="false">Inbox</string>
+    <string name="contact_us" translatable="false">Contact us</string>
+    <string name="settings" translatable="false">Settings</string>
+    <string name="share_app" translatable="false">Share app</string>
+    <string name="subscriptions" translatable="false">Subscriptions</string>
+    <string name="logout" translatable="false">Logout</string>
 </resources>

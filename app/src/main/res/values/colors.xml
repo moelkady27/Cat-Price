@@ -21,4 +21,6 @@
     <color name="yellow">#FBC821</color>
 
     <color name="red">#FF0000</color>
+    <color name="home_search">#FFF5F4F8</color>
+
 </resources>

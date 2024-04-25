@@ -8,8 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.catprice.R
 import com.example.catprice.ntwork.NetworkUtils
+import com.example.catprice.retrofit.RetrofitClient
 import com.example.catprice.storage.AppReferences
 import com.example.catprice.ui.home.activities.HomeActivity
+import com.example.catprice.ui.setting.factory.ChangePasswordViewModelFactory
+import com.example.catprice.ui.setting.repository.ChangePasswordRepository
 import com.example.catprice.ui.setting.viewModels.ChangePasswordViewModels
 import kotlinx.android.synthetic.main.activity_change_password.button_change_pass
 import kotlinx.android.synthetic.main.activity_change_password.et_confirm_new_password
@@ -29,7 +32,9 @@ class ChangePasswordActivity : AppCompatActivity() {
 
         networkUtils = NetworkUtils(this@ChangePasswordActivity)
 
-        changePasswordViewModels = ViewModelProvider(this@ChangePasswordActivity)[ChangePasswordViewModels::class.java]
+        val changePasswordRepository = ChangePasswordRepository(RetrofitClient.instance)
+        val factory = ChangePasswordViewModelFactory(changePasswordRepository)
+        changePasswordViewModels = ViewModelProvider(this@ChangePasswordActivity, factory)[ChangePasswordViewModels::class.java]
 
         changePasswordViewModels.changePassResponseLiveData.observe(this@ChangePasswordActivity) { response ->
             response.let {

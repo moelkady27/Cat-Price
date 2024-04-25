@@ -10,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.catprice.R
 import com.example.catprice.ntwork.NetworkUtils
+import com.example.catprice.retrofit.RetrofitClient
+import com.example.catprice.ui.auth.factory.SignUpViewModelFactory
+import com.example.catprice.ui.auth.repository.SignUpRepository
 import com.example.catprice.ui.auth.viewModel.SignUpViewModel
 import kotlinx.android.synthetic.main.activity_sign_up.btn_select_company
 import kotlinx.android.synthetic.main.activity_sign_up.btn_select_individual
@@ -36,7 +39,9 @@ class SignUpActivity : AppCompatActivity() {
 
         networkUtils = NetworkUtils(this@SignUpActivity)
 
-        signUpViewModel = ViewModelProvider(this@SignUpActivity)[SignUpViewModel::class.java]
+        val signUpRepository = SignUpRepository(RetrofitClient.instance)
+        val factory = SignUpViewModelFactory(signUpRepository)
+        signUpViewModel = ViewModelProvider(this@SignUpActivity, factory)[SignUpViewModel::class.java]
 
         signUpViewModel.signUpResponseLiveData.observe(this@SignUpActivity) { response ->
             response.let {

@@ -2,22 +2,22 @@ package com.example.catprice.ui.auth.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.catprice.retrofit.RetrofitClient
 import com.example.catprice.ui.auth.models.SignInResponse
-import com.example.catprice.ui.auth.request.SignInRequest
+import com.example.catprice.ui.auth.repository.SignInRepository
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class SignInViewModel: ViewModel() {
+class SignInViewModel(
+    private val signInRepository: SignInRepository
+): ViewModel() {
 
     val signInResponseLiveData: MutableLiveData<SignInResponse> = MutableLiveData()
     val errorLiveData: MutableLiveData<String> = MutableLiveData()
 
     fun signIn(email: String, password: String) {
-        val data = SignInRequest(email, password)
 
-        RetrofitClient.instance.login(data)
+        signInRepository.signIn(email, password)
             .enqueue(object : Callback<SignInResponse> {
                 override fun onResponse(
                     call: Call<SignInResponse>,

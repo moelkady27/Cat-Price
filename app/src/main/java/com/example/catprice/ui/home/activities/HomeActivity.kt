@@ -10,8 +10,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.catprice.R
+import com.example.catprice.retrofit.RetrofitClient
 import com.example.catprice.storage.AppReferences
 import com.example.catprice.ui.auth.activities.SignInActivity
+import com.example.catprice.ui.auth.factory.LogOutViewModelFactory
+import com.example.catprice.ui.auth.repository.LogOutRepository
 import com.example.catprice.ui.auth.viewModel.LogOutViewModel
 import com.example.catprice.ui.setting.activities.SettingsActivity
 import kotlinx.android.synthetic.main.activity_home.drawerLayout
@@ -32,8 +35,9 @@ class HomeActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_home)
 
-
-        logOutViewModel = ViewModelProvider(this@HomeActivity)[LogOutViewModel::class.java]
+        val logOutRepository = LogOutRepository(RetrofitClient.instance)
+        val factory = LogOutViewModelFactory(logOutRepository)
+        logOutViewModel = ViewModelProvider(this@HomeActivity, factory)[LogOutViewModel::class.java]
 
         logOutViewModel.logOutResponseLiveData.observe(this@HomeActivity) { response ->
             response.let {

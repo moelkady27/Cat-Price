@@ -2,23 +2,23 @@ package com.example.catprice.ui.auth.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.catprice.retrofit.RetrofitClient
 import com.example.catprice.ui.auth.models.SignUpResponse
-import com.example.catprice.ui.auth.request.SignUpRequest
+import com.example.catprice.ui.auth.repository.SignUpRepository
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class SignUpViewModel: ViewModel() {
+class SignUpViewModel(
+    private val signUpRepository: SignUpRepository
+): ViewModel() {
 
     val signUpResponseLiveData: MutableLiveData<SignUpResponse> = MutableLiveData()
     val errorLiveData: MutableLiveData<String> = MutableLiveData()
 
-    fun register(name: String, email: String, password: String, country: String, phoneNumber: String, type: String){
-        val data = SignUpRequest(name, email, password, country, phoneNumber, type)
+    fun register(name: String, email: String, password: String, country: String, phoneNumber: String, type: String) {
 
-        RetrofitClient.instance.register(data)
-            .enqueue(object : Callback<SignUpResponse>{
+        signUpRepository.signUp(name, email, password, country, phoneNumber, type)
+            .enqueue(object : Callback<SignUpResponse> {
                 override fun onResponse(
                     call: Call<SignUpResponse>,
                     response: Response<SignUpResponse>

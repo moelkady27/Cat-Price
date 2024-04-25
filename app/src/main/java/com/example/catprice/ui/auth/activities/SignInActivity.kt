@@ -8,7 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.catprice.R
 import com.example.catprice.ntwork.NetworkUtils
+import com.example.catprice.retrofit.ApiService
+import com.example.catprice.retrofit.RetrofitClient
 import com.example.catprice.storage.AppReferences
+import com.example.catprice.ui.auth.factory.SignInViewModelFactory
+import com.example.catprice.ui.auth.repository.SignInRepository
 import com.example.catprice.ui.auth.viewModel.SignInViewModel
 import com.example.catprice.ui.home.activities.HomeActivity
 import kotlinx.android.synthetic.main.activity_sign_in.btn_sign_in
@@ -31,7 +35,9 @@ class SignInActivity : AppCompatActivity() {
 
         networkUtils = NetworkUtils(this@SignInActivity)
 
-        signInViewModel = ViewModelProvider(this@SignInActivity)[SignInViewModel::class.java]
+        val signInRepository = SignInRepository(RetrofitClient.instance)
+        val factory = SignInViewModelFactory(signInRepository)
+        signInViewModel = ViewModelProvider(this@SignInActivity, factory)[SignInViewModel::class.java]
 
         signInViewModel.signInResponseLiveData.observe(this) { response ->
             response.let {

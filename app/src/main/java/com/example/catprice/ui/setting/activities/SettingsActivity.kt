@@ -9,8 +9,10 @@ import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.example.catprice.R
 import kotlinx.android.synthetic.main.activity_settings.arrow_forward_change_pass
+import kotlinx.android.synthetic.main.activity_settings.arrow_forward_edit_profile
 import kotlinx.android.synthetic.main.activity_settings.spinner
 import kotlinx.android.synthetic.main.activity_settings.spinner1
+import kotlinx.android.synthetic.main.activity_settings.textView28
 import kotlinx.android.synthetic.main.activity_settings.textView29
 import kotlinx.android.synthetic.main.activity_settings.toolbar_setting
 
@@ -81,6 +83,14 @@ class SettingsActivity : AppCompatActivity() {
 
         textView29.setOnClickListener {
             startActivity(Intent(this@SettingsActivity , ChangePasswordActivity::class.java))
+        }
+
+        arrow_forward_edit_profile.setOnClickListener {
+            startActivity(Intent(this@SettingsActivity , EditProfileActivity::class.java))
+        }
+
+        textView28.setOnClickListener {
+            startActivity(Intent(this@SettingsActivity , EditProfileActivity::class.java))
         }
 
         setUpActionBar()

@@ -32,39 +32,20 @@ class ChangePasswordActivity : AppCompatActivity() {
 
         networkUtils = NetworkUtils(this@ChangePasswordActivity)
 
+        initView()
+        setUpActionBar()
+    }
+
+    private fun initView() {
         val changePasswordRepository = ChangePasswordRepository(RetrofitClient.instance)
         val factory = ChangePasswordViewModelFactory(changePasswordRepository)
         changePasswordViewModels = ViewModelProvider(this@ChangePasswordActivity, factory)[ChangePasswordViewModels::class.java]
-
-        changePasswordViewModels.changePassResponseLiveData.observe(this@ChangePasswordActivity) { response ->
-            response.let {
-                val message = it.message
-
-                Log.e("change password " , message)
-
-                startActivity(Intent(this@ChangePasswordActivity , HomeActivity::class.java))
-            }
-        }
-
-        changePasswordViewModels.errorLiveData.observe(this@ChangePasswordActivity) { error ->
-            error.let {
-                try {
-                    val errorMessage = JSONObject(error).getString("message")
-                    Toast.makeText(this@ChangePasswordActivity, errorMessage, Toast.LENGTH_LONG).show()
-                } catch (e: Exception) {
-                    Toast.makeText(this@ChangePasswordActivity, "Error Server", Toast.LENGTH_LONG)
-                        .show()
-                }
-            }
-        }
 
         button_change_pass.setOnClickListener {
             if (networkUtils.isNetworkAvailable()){
                 changePass()
             }
         }
-
-        setUpActionBar()
     }
 
     private fun changePass() {
@@ -76,6 +57,28 @@ class ChangePasswordActivity : AppCompatActivity() {
 
         if (isValidInput()) {
             changePasswordViewModels.changePass(token, currentPassword, newPassword, confirmPassword, userId)
+
+            changePasswordViewModels.changePassResponseLiveData.observe(this@ChangePasswordActivity) { response ->
+                response.let {
+                    val message = it.message
+
+                    Log.e("change password " , message)
+
+                    startActivity(Intent(this@ChangePasswordActivity , HomeActivity::class.java))
+                }
+            }
+
+            changePasswordViewModels.errorLiveData.observe(this@ChangePasswordActivity) { error ->
+                error.let {
+                    try {
+                        val errorMessage = JSONObject(error).getString("message")
+                        Toast.makeText(this@ChangePasswordActivity, errorMessage, Toast.LENGTH_LONG).show()
+                    } catch (e: Exception) {
+                        Toast.makeText(this@ChangePasswordActivity, "Error Server", Toast.LENGTH_LONG)
+                            .show()
+                    }
+                }
+            }
         }
     }
 

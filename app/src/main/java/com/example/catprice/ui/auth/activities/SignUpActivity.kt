@@ -39,29 +39,14 @@ class SignUpActivity : AppCompatActivity() {
 
         networkUtils = NetworkUtils(this@SignUpActivity)
 
+        initView()
+
+    }
+
+    private fun initView() {
         val signUpRepository = SignUpRepository(RetrofitClient.instance)
         val factory = SignUpViewModelFactory(signUpRepository)
         signUpViewModel = ViewModelProvider(this@SignUpActivity, factory)[SignUpViewModel::class.java]
-
-        signUpViewModel.signUpResponseLiveData.observe(this@SignUpActivity) { response ->
-            response.let {
-                val message = response.success.toString()
-
-                Log.e("message sign up", message)
-                startActivity(Intent(this@SignUpActivity , SignInActivity::class.java))
-            }
-        }
-
-        signUpViewModel.errorLiveData.observe(this@SignUpActivity) { error ->
-            error.let {
-                try {
-                    val errorMessage = JSONObject(error).getString("error")
-                    Log.e("Error Message Sign Up", errorMessage)
-                } catch (e: JSONException) {
-                    Toast.makeText(this@SignUpActivity, error, Toast.LENGTH_LONG).show()
-                }
-            }
-        }
 
         textView17.visibility = View.INVISIBLE
         et_company_name.visibility = View.INVISIBLE
@@ -105,6 +90,26 @@ class SignUpActivity : AppCompatActivity() {
 
         if (isValidInput()){
             signUpViewModel.register(fullName, email, password, country,  phone, type)
+
+            signUpViewModel.signUpResponseLiveData.observe(this@SignUpActivity) { response ->
+                response.let {
+                    val message = response.success.toString()
+
+                    Log.e("message sign up", message)
+                    startActivity(Intent(this@SignUpActivity , SignInActivity::class.java))
+                }
+            }
+
+            signUpViewModel.errorLiveData.observe(this@SignUpActivity) { error ->
+                error.let {
+                    try {
+                        val errorMessage = JSONObject(error).getString("error")
+                        Log.e("Error Message Sign Up", errorMessage)
+                    } catch (e: JSONException) {
+                        Toast.makeText(this@SignUpActivity, error, Toast.LENGTH_LONG).show()
+                    }
+                }
+            }
         }
 
     }

@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.catprice.R
 import com.example.catprice.ntwork.NetworkUtils
-import com.example.catprice.retrofit.ApiService
 import com.example.catprice.retrofit.RetrofitClient
 import com.example.catprice.storage.AppReferences
 import com.example.catprice.ui.auth.factory.SignInViewModelFactory
@@ -35,40 +34,14 @@ class SignInActivity : AppCompatActivity() {
 
         networkUtils = NetworkUtils(this@SignInActivity)
 
+        initView()
+
+    }
+
+    private fun initView() {
         val signInRepository = SignInRepository(RetrofitClient.instance)
         val factory = SignInViewModelFactory(signInRepository)
         signInViewModel = ViewModelProvider(this@SignInActivity, factory)[SignInViewModel::class.java]
-
-        signInViewModel.signInResponseLiveData.observe(this) { response ->
-            response.let {
-
-                val token = it.token
-                val userId = it.userData._id
-
-                Log.e("SignInActivity token is" , token)
-
-                AppReferences.setToken(this@SignInActivity , token)
-
-                AppReferences.setLoginState(this@SignInActivity, true)
-
-                AppReferences.setUserId(this@SignInActivity , userId)
-
-                Log.e("Sign In userId is " , userId)
-
-                startActivity(Intent(this@SignInActivity , HomeActivity::class.java))
-            }
-        }
-
-        signInViewModel.errorLiveData.observe(this) { error ->
-            error?.let {
-                try {
-                    val errorMessage = JSONObject(error).getString("message")
-                    Toast.makeText(this@SignInActivity, errorMessage, Toast.LENGTH_LONG).show()
-                } catch (e: JSONException) {
-                    Toast.makeText(this@SignInActivity, error, Toast.LENGTH_LONG).show()
-                }
-            }
-        }
 
         tv_sign_up_now.setOnClickListener {
             startActivity(Intent(this@SignInActivity , SignUpActivity::class.java))
@@ -91,6 +64,38 @@ class SignInActivity : AppCompatActivity() {
 
         if (isValidInput()){
             signInViewModel.signIn(email, password)
+
+            signInViewModel.signInResponseLiveData.observe(this) { response ->
+                response.let {
+
+                    val token = it.token
+                    val userId = it.userData._id
+
+                    Log.e("SignInActivity token is" , token)
+
+                    AppReferences.setToken(this@SignInActivity , token)
+
+                    AppReferences.setLoginState(this@SignInActivity, true)
+
+                    AppReferences.setUserId(this@SignInActivity , userId)
+
+                    Log.e("Sign In userId is " , userId)
+
+                    startActivity(Intent(this@SignInActivity , HomeActivity::class.java))
+                }
+            }
+
+            signInViewModel.errorLiveData.observe(this) { error ->
+                error?.let {
+                    try {
+                        val errorMessage = JSONObject(error).getString("message")
+                        Toast.makeText(this@SignInActivity, errorMessage, Toast.LENGTH_LONG).show()
+                    } catch (e: JSONException) {
+                        Toast.makeText(this@SignInActivity, error, Toast.LENGTH_LONG).show()
+                    }
+                }
+            }
+
         }
     }
 

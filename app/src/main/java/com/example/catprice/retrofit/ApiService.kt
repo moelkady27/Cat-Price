@@ -6,8 +6,10 @@ import com.example.catprice.ui.auth.models.SignUpResponse
 import com.example.catprice.ui.auth.request.SignInRequest
 import com.example.catprice.ui.auth.request.SignUpRequest
 import com.example.catprice.ui.setting.models.ChangePasswordResponse
+import com.example.catprice.ui.setting.models.ContactUsResponse
 import com.example.catprice.ui.setting.models.UserResponse
 import com.example.catprice.ui.setting.request.ChangePasswordRequest
+import com.example.catprice.ui.setting.request.ContactUsRequest
 import com.example.catprice.ui.setting.request.GetUserRequest
 import retrofit2.Call
 import retrofit2.http.Body
@@ -55,4 +57,12 @@ interface ApiService {
         @Query("_id") userId: String,
         @Body req: GetUserRequest
     ): Call<UserResponse>
+
+    @POST("api/v1/user/inbox/contactUs")
+    fun contactUs(
+        @Header("Authorization") token: String,
+//        @Query("_id") userId: String,
+//        @Body req: ContactUsRequest
+        @Body req: ContactUsRequest
+    ): Call<ContactUsResponse>
 }

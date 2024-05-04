@@ -17,15 +17,11 @@ import com.example.catprice.ui.auth.activities.SignInActivity
 import com.example.catprice.ui.auth.factory.LogOutViewModelFactory
 import com.example.catprice.ui.auth.repository.LogOutRepository
 import com.example.catprice.ui.auth.viewModel.LogOutViewModel
+import com.example.catprice.ui.setting.activities.ContactUsActivity
 import com.example.catprice.ui.setting.activities.SettingsActivity
 import com.example.catprice.ui.setting.factory.ProfileViewModelFactory
 import com.example.catprice.ui.setting.repository.ProfileRepository
 import com.example.catprice.ui.setting.viewModels.ProfileViewModel
-import kotlinx.android.synthetic.main.activity_edit_profile.btn_select_company_edit_profile
-import kotlinx.android.synthetic.main.activity_edit_profile.btn_select_individual_edit_profile
-import kotlinx.android.synthetic.main.activity_edit_profile.edt_email
-import kotlinx.android.synthetic.main.activity_edit_profile.edt_full_name
-import kotlinx.android.synthetic.main.activity_edit_profile.edt_phone
 import kotlinx.android.synthetic.main.activity_home.drawerLayout
 import kotlinx.android.synthetic.main.activity_home.navView
 import kotlinx.android.synthetic.main.activity_home.toolbar
@@ -111,7 +107,7 @@ class HomeActivity : AppCompatActivity() {
                 }
 
                 R.id.contactUsItem -> {
-
+                    startActivity(Intent(this@HomeActivity, ContactUsActivity::class.java))
                 }
 
                 R.id.settingsItem -> {

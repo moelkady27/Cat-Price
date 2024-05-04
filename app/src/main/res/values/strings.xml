@@ -66,4 +66,8 @@
     <string name="confirm_your_password">Confirm Your Password</string>
     <string name="edit">Edit</string>
     <string name="current_password">Current Password</string>
+    <string name="please_contact_the_administrator_by">Please Contact The administrator by</string>
+    <string name="sending_an_gmail">sending an gmail</string>
+    <string name="send_to_admin">Send to Admin</string>
+    <string name="message">Message</string>
 </resources>

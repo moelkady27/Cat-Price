@@ -70,4 +70,11 @@
     <string name="sending_an_gmail">sending an gmail</string>
     <string name="send_to_admin">Send to Admin</string>
     <string name="message">Message</string>
+    <string name="price_list">price list</string>
+    <string name="search_item">Search item</string>
+    <string name="add_item">Add item</string>
+    <string name="share">Share</string>
+    <string name="item_name">Item Name</string>
+    <string name="item_price">Item price</string>
+    <string name="upload_image">Upload  image</string>
 </resources>

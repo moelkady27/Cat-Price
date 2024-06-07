@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_settings.arrow_forward_change_pas
 import kotlinx.android.synthetic.main.activity_settings.arrow_forward_edit_profile
 import kotlinx.android.synthetic.main.activity_settings.spinner
 import kotlinx.android.synthetic.main.activity_settings.spinner1
-import kotlinx.android.synthetic.main.activity_settings.textView28
+import kotlinx.android.synthetic.main.activity_settings.textView280
 import kotlinx.android.synthetic.main.activity_settings.textView29
 import kotlinx.android.synthetic.main.activity_settings.toolbar_setting
 
@@ -89,7 +89,7 @@ class SettingsActivity : AppCompatActivity() {
             startActivity(Intent(this@SettingsActivity , EditProfileActivity::class.java))
         }
 
-        textView28.setOnClickListener {
+        textView280.setOnClickListener {
             startActivity(Intent(this@SettingsActivity , EditProfileActivity::class.java))
         }
 

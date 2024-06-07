@@ -15,6 +15,7 @@ import com.example.catprice.retrofit.RetrofitClient
 import com.example.catprice.storage.AppReferences
 import com.example.catprice.ui.auth.activities.SignInActivity
 import com.example.catprice.ui.auth.factory.LogOutViewModelFactory
+import com.example.catprice.ui.auth.list.activities.MyListsActivity
 import com.example.catprice.ui.auth.repository.LogOutRepository
 import com.example.catprice.ui.auth.viewModel.LogOutViewModel
 import com.example.catprice.ui.setting.activities.ContactUsActivity
@@ -95,7 +96,7 @@ class HomeActivity : AppCompatActivity() {
                 }
 
                 R.id.MyListsItem -> {
-
+                    startActivity(Intent(this@HomeActivity, MyListsActivity::class.java))
                 }
 
                 R.id.brandsItem -> {

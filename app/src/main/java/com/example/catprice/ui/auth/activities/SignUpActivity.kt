@@ -48,8 +48,8 @@ class SignUpActivity : AppCompatActivity() {
         val factory = SignUpViewModelFactory(signUpRepository)
         signUpViewModel = ViewModelProvider(this@SignUpActivity, factory)[SignUpViewModel::class.java]
 
-        textView17.visibility = View.INVISIBLE
-        et_company_name.visibility = View.INVISIBLE
+        textView17.visibility = View.GONE
+        et_company_name.visibility = View.GONE
 
         btn_select_company.setOnClickListener {
             textView17.visibility = View.VISIBLE
@@ -57,8 +57,8 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         btn_select_individual.setOnClickListener {
-            textView17.visibility = View.INVISIBLE
-            et_company_name.visibility = View.INVISIBLE
+            textView17.visibility = View.GONE
+            et_company_name.visibility = View.GONE
         }
 
         tv_sign_in_now.setOnClickListener {

@@ -249,7 +249,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/radio"
                 app:layout_constraintStart_toStartOf="@+id/radio"
                 app:layout_constraintTop_toBottomOf="@+id/radio"
-                android:visibility="visible" />
+                android:visibility="gone" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/et_company_name"
@@ -271,7 +271,7 @@
                 app:layout_constraintStart_toStartOf="@+id/textView17"
                 app:layout_constraintTop_toBottomOf="@+id/textView17"
                 tools:ignore="RtlSymmetry"
-                android:visibility="visible" />
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn_sign_up"
@@ -284,8 +284,8 @@
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="@+id/et_company_name"
-                app:layout_constraintStart_toStartOf="@+id/et_company_name"
+                app:layout_constraintEnd_toEndOf="@+id/radio"
+                app:layout_constraintStart_toStartOf="@+id/radio"
                 app:layout_constraintTop_toBottomOf="@+id/et_company_name" />
 
             <LinearLayout

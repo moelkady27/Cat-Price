@@ -1,18 +1,20 @@
-package com.example.catprice.ui.auth.list.activities
+package com.example.catprice.ui.list.activities
 
-import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.catprice.R
-import kotlinx.android.synthetic.main.activity_my_lists.card_add_item
-import kotlinx.android.synthetic.main.activity_my_lists.textViewAddItem
-import kotlinx.android.synthetic.main.activity_my_lists.toolbar_my_lists
+import kotlinx.android.synthetic.main.activity_price_lists.card_add_item
+import kotlinx.android.synthetic.main.activity_price_lists.card_myLists
+import kotlinx.android.synthetic.main.activity_price_lists.textViewAddItem
+import kotlinx.android.synthetic.main.activity_price_lists.textViewMyLists
+import kotlinx.android.synthetic.main.activity_price_lists.toolbar_price_lists
 
-class MyListsActivity : AppCompatActivity() {
+class PriceListsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_lists)
+        setContentView(R.layout.activity_price_lists)
 
         initView()
         setUpActionBar()
@@ -25,6 +27,14 @@ class MyListsActivity : AppCompatActivity() {
 
         card_add_item.setOnClickListener {
             openDialog()
+        }
+
+        card_myLists.setOnClickListener {
+            startActivity(Intent(this, MyListActivity::class.java))
+        }
+
+        textViewMyLists.setOnClickListener {
+            startActivity(Intent(this, MyListActivity::class.java))
         }
     }
 
@@ -44,7 +54,7 @@ class MyListsActivity : AppCompatActivity() {
     }
 
     private fun setUpActionBar() {
-        setSupportActionBar(toolbar_my_lists)
+        setSupportActionBar(toolbar_price_lists)
 
         val actionBar = supportActionBar
         if (actionBar != null) {
@@ -53,7 +63,7 @@ class MyListsActivity : AppCompatActivity() {
             actionBar.title = ""
         }
 
-        toolbar_my_lists.setNavigationOnClickListener {
+        toolbar_price_lists.setNavigationOnClickListener {
             onBackPressed()
         }
     }

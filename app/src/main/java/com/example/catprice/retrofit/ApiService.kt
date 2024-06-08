@@ -1,10 +1,12 @@
 package com.example.catprice.retrofit
 
+import com.example.catprice.ui.list.request.CreateListRequest
 import com.example.catprice.ui.auth.models.LogOutResponse
 import com.example.catprice.ui.auth.models.SignInResponse
 import com.example.catprice.ui.auth.models.SignUpResponse
 import com.example.catprice.ui.auth.request.SignInRequest
 import com.example.catprice.ui.auth.request.SignUpRequest
+import com.example.catprice.ui.list.models.CreateListResponse
 import com.example.catprice.ui.setting.models.ChangePasswordResponse
 import com.example.catprice.ui.setting.models.ContactUsResponse
 import com.example.catprice.ui.setting.models.UserResponse
@@ -65,4 +67,10 @@ interface ApiService {
 //        @Body req: ContactUsRequest
         @Body req: ContactUsRequest
     ): Call<ContactUsResponse>
+
+    @POST("api/v1/user/list/create")
+    fun createList(
+        @Header("Authorization") token: String,
+        @Body req: CreateListRequest
+    ): Call<CreateListResponse>
 }

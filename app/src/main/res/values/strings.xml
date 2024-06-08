@@ -77,4 +77,8 @@
     <string name="item_name">Item Name</string>
     <string name="item_price">Item price</string>
     <string name="upload_image">Upload  image</string>
+    <string name="my_list">My list</string>
+    <string name="list_name">List name</string>
+    <string name="save_list">Save list</string>
+    <string name="save">Save</string>
 </resources>
